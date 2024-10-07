@@ -39,7 +39,7 @@ router.get('/profile', (req, res) => {
 });
 
 
-router.get('/login', (req, res) => {  // <-- Corrected arrow function
+router.get('/login', (req, res) => {
   fs.readFile(path.join(__dirname, 'login.html'), 'utf-8', (err, data) => {
     if (err) {
       return res.status(500).json({ message: 'Error reading user data' });
